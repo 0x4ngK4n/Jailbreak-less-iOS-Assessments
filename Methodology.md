@@ -51,7 +51,7 @@ The following tools are required as pre-requisite before starting such an assess
 
 ## Generating a Provisioning File
 - We can generate a provisioning profile by creating an empty Xcode project.
-- Launch this project on a physical test device (the Non-Jailbroken iPhone) such that 'embedded.mobileprovision' file is generated on the computer.
+- Launch this project on a physical test device (a physical iPhone, not the emulator) such that 'embedded.mobileprovision' file is generated on the computer.
 - This provisioning will later be used by Objection to generate the patched IPA.
 
 ## The Patching Process Tools
@@ -77,6 +77,7 @@ The following tools are required as pre-requisite before starting such an assess
   - Use the flag: --skip-cleanup to get the Frida Gadget-injected IPA
     - Sample Command: ```objection patchipa --source <ipa file> --codesign-signature <signature> --skip-cleanup```
     - Use the below command to get the codesign value. This is required for the aforementioned objection patching command:
+      ```security find-identity -v -p codesigning```
     
       <img width="1056" alt="image" src="https://user-images.githubusercontent.com/65641440/108062576-f69eb900-7094-11eb-82fa-1125e1d18d7d.png">
     - Take note of the Temporary folder from where codesigned IPA is copied by Objection.
