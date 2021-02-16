@@ -1,4 +1,4 @@
-# Jailbreak-less-iOS-Assessments
+# 📱 Jailbreak-less-iOS-Assessments
 
 ### As Jalbreaks become more and more difficult with Apple improving iOS security, there will be an upcoming need among security assessors to assess iOS Applications for securty vunerabilities with non-Jailbroken phones.
 #### This repository details a methodology to use Frida/Objection to assess iOS applications in Jaibreak-less environment.
